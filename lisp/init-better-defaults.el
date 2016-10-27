@@ -9,10 +9,17 @@
 (abbrev-mode t)
 (define-abbrev-table 'global-abbrev-table '(
 					    ;; signature
-					    ("8zl" "henry")
-					    ;; Microsoft
-					    ("8ms" "Macrosoft")
+					    ("henry" "@author: henry")
+					    ;; time
+					    ("time" "time:" current-time-string )
 					    ))
+;; 函数的注释引用
+(add-to-list 'load-path "~/.emacs.d/code/doxymacs")
+(require 'doxymacs) ;; 启动doxymacs
+(add-hook 'php-mode-hook 'doxymacs-mode)
+(global-set-key (kbd "M-f") 'doxymacs-insert-file-comment)
+(global-set-key (kbd "M-d") 'doxymacs-insert-function-comment)
+;; 函数的注释引用
 
 (setq make-backup-files nil)
 
