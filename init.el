@@ -30,6 +30,7 @@
   (require 'init-web-mode)
   (require 'init-yas)
   (require 'init-lua)
+  (require 'init-yaml)
   ;;(require 'init-ggtags)
   
   )
